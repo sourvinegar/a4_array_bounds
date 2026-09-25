@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/my_test.dir/link.d CMakeFiles/my_test.dir/include/src/array_bounds.cpp.o CMakeFiles/my_test.dir/include/tests/test.cpp.o -o my_test

@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/bound.dir/link.d CMakeFiles/bound.dir/include/src/main.cpp.o CMakeFiles/bound.dir/include/src/array_bounds.cpp.o -o bound

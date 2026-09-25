@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/lacas/a4_array_bounds/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
