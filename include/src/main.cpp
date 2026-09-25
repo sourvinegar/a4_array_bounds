@@ -3,40 +3,8 @@
 #include <cassert>
 #include <iostream>
 #include <algorithm>
-int main() {
-     int arr[]{2, 5, 5, 5, 10};
-     int size{sizeof(arr) / sizeof(arr[0])};
 
-     int target{5};
-     // Find the position where target can be inserted
-     // while keeping the array sorted.
-     auto itr = std::lower_bound(arr, arr + size, target);
-     // itr (iterator) points to that position
-     // Subtract arr (pointer) from itr (pointer) to get the index
-     std::cout << itr - arr << "\n"; // 1
-     // target can be inserted at index 1
-
-     target = 3;
-     itr = std::lower_bound(arr, arr + size, target);
-     std::cout << itr - arr << "\n"; // 1
-
-     target = 0;
-     itr = std::lower_bound(arr, arr + size, target);
-     std::cout << itr - arr << "\n"; // 0
-
-     target = 8;
-     itr = std::lower_bound(arr, arr + size, target);
-     std::cout << itr - arr << "\n"; // 4
-     
-     target = 15;
-     itr = std::lower_bound(arr, arr + size, target);
-     std::cout << itr - arr << "\n"; // 5
-
-     return 0;
-
-
-}
-/*
+ int main() {
 int a[] = {2, 5, 5, 5, 10};
 int n = sizeof(a) / sizeof(a[0]);
 int i;
@@ -85,7 +53,7 @@ std::cout << "Freq=" << dsac::array::frequency(a, n, t) << std::endl;
 std::cout << "** All tests passed **\n";
 return 0;
 }
-*/
+
 //for array {2, 5, 5, 5, 10};
 /*
 Target -1: LB=0, UB=0, Freq=0

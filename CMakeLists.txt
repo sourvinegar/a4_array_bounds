@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # used internally by CMake to identify your project
 project(a4_array_bounds)
 # Include the directory headers are located
-include_directories(${CMAKE_SOURCE_DIR}/include/src)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 # Add the main executable
-add_executable(main src/main.cpp src/array_bouns.cpp)
+add_executable(bound include/src/main.cpp include/src/array_bounds.cpp)
 # add_executable(my_test src/prime.cpp tests/test.cpp)
