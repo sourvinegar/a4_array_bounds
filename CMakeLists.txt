@@ -8,4 +8,4 @@ project(a4_array_bounds)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 # Add the main executable
 add_executable(bound include/src/main.cpp include/src/array_bounds.cpp)
-# add_executable(my_test src/prime.cpp tests/test.cpp)
+add_executable(my_test include/src/array_bounds.cpp include/tests/test.cpp)

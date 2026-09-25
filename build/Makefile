@@ -129,12 +129,26 @@ bound/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bound.dir/build.make CMakeFiles/bound.dir/build
 .PHONY : bound/fast
 
+#=============================================================================
+# Target rules for targets named my_test
+
+# Build rule for target.
+my_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test
+.PHONY : my_test
+
+# fast build rule for target.
+my_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
+.PHONY : my_test/fast
+
 include/src/array_bounds.o: include/src/array_bounds.cpp.o
 .PHONY : include/src/array_bounds.o
 
 # target to build an object file
 include/src/array_bounds.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bound.dir/build.make CMakeFiles/bound.dir/include/src/array_bounds.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/src/array_bounds.cpp.o
 .PHONY : include/src/array_bounds.cpp.o
 
 include/src/array_bounds.i: include/src/array_bounds.cpp.i
@@ -143,6 +157,7 @@ include/src/array_bounds.i: include/src/array_bounds.cpp.i
 # target to preprocess a source file
 include/src/array_bounds.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bound.dir/build.make CMakeFiles/bound.dir/include/src/array_bounds.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/src/array_bounds.cpp.i
 .PHONY : include/src/array_bounds.cpp.i
 
 include/src/array_bounds.s: include/src/array_bounds.cpp.s
@@ -151,6 +166,7 @@ include/src/array_bounds.s: include/src/array_bounds.cpp.s
 # target to generate assembly for a file
 include/src/array_bounds.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bound.dir/build.make CMakeFiles/bound.dir/include/src/array_bounds.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/src/array_bounds.cpp.s
 .PHONY : include/src/array_bounds.cpp.s
 
 include/src/main.o: include/src/main.cpp.o
@@ -177,6 +193,30 @@ include/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bound.dir/build.make CMakeFiles/bound.dir/include/src/main.cpp.s
 .PHONY : include/src/main.cpp.s
 
+include/tests/test.o: include/tests/test.cpp.o
+.PHONY : include/tests/test.o
+
+# target to build an object file
+include/tests/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/tests/test.cpp.o
+.PHONY : include/tests/test.cpp.o
+
+include/tests/test.i: include/tests/test.cpp.i
+.PHONY : include/tests/test.i
+
+# target to preprocess a source file
+include/tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/tests/test.cpp.i
+.PHONY : include/tests/test.cpp.i
+
+include/tests/test.s: include/tests/test.cpp.s
+.PHONY : include/tests/test.s
+
+# target to generate assembly for a file
+include/tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/include/tests/test.cpp.s
+.PHONY : include/tests/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +226,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bound"
+	@echo "... my_test"
 	@echo "... include/src/array_bounds.o"
 	@echo "... include/src/array_bounds.i"
 	@echo "... include/src/array_bounds.s"
 	@echo "... include/src/main.o"
 	@echo "... include/src/main.i"
 	@echo "... include/src/main.s"
+	@echo "... include/tests/test.o"
+	@echo "... include/tests/test.i"
+	@echo "... include/tests/test.s"
 .PHONY : help
 
 
